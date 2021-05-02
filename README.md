@@ -27,10 +27,18 @@ Create a table named "Movies" in your DynamoDB account
 
 #### Step 5:
 
+Set your region environment variable.
+
+export AWS_DEFAULT_REGION=us-east-2
+
+#### Step 6:
+
 Use tmux or open four separate terminals to simulate Zookeeper, Kafka Consumer instance, Producer and Consumer for the kafka cluster.
 
-~/bin/zookeeper-server-start.sh config/zookeeper.properties
-bin/kafka-server-start.sh config/server.properties
-python ./sendEvents.py
-python ./consumer.py
+sudo ~/kafka/bin/zookeeper-server-start.sh ~/kafka/config/zookeeper.properties
 
+sudo ~/kafka/bin/kafka-server-start.sh ~/kafka/config/server.properties
+
+python3 ~/kafka_netflix_project/consumer.py
+
+python3 ~/kafka_netflix_project/sendEvents.py
