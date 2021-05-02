@@ -13,12 +13,20 @@ Credit for the data goes to Mike Metzger.
 #### Step 2:
 
 Run the environment.sh file using the linux command
+
 sudo ./environment.sh
 
 #### Step 3:
 
 Create the credentials file in the ~/.aws directory
-~/.aws/credentials and store id-key pair. Follow this link to know the format
+
+mkdir ~/.aws
+
+Then create the file ~/.aws/credentials
+
+nano ~/.aws/credentials
+
+and store id-key pair. Follow this link to know the format
 https://stackoverflow.com/questions/33297172/boto3-error-botocore-exceptions-nocredentialserror-unable-to-locate-credential
 
 #### Step 4:
